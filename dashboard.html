@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard UMKM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="checkLogin(); loadDashboard()">
+
+<div class="dashboard">
+  <img src="img/marketing.png" class="hero-img" alt="Marketing UMKM">
+
+  <h1 id="welcome">Selamat Datang</h1>
+  <p>Kelola produk dan lihat preview coding di sini.</p>
+
+  <!-- Upload Produk -->
+  <div class="upload-section">
+    <h3>Unggah Gambar Produk</h3>
+    <input type="file" id="productImage" accept="image/*">
+    <button onclick="uploadImage()">Upload</button>
+  </div>
+
+  <!-- Preview Hasil Upload -->
+  <div class="preview-section">
+    <h3>Hasil Upload Produk</h3>
+    <div id="imagePreview" class="image-preview"></div>
+  </div>
+
+  <!-- Preview HTML/CSS/JS -->
+  <div class="code-section">
+    <h3>Preview Coding</h3>
+    <pre id="codePreview">
+// Contoh HTML
+<div class="produk">Produk UMKM</div>
+    </pre>
+  </div>
+
+  <button onclick="logout()">Logout</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
